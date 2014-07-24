@@ -1,0 +1,30 @@
+<head>
+    <title>test</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </head>
+
+<template name="masterLayout">
+  {{> yield}}  
+</template>
+
+<template name="home">
+  <h3>Users</h3>
+  
+  <ul>
+    {{#each Users}}
+    <li><span class='glyphicon glyphicon-remove delUser'></span><div class='name'>{{name}}</div></li>
+    {{/each}}
+    </ul>
+  
+  <div id="newUserForm">
+    <label>Name</label>
+    <input type="text" id="name" />
+    <label>Password</label>
+    <input type="text" id="password" />
+    <button id='addUser'>Add</button>
+  </div>
+</template>
+
+
+
